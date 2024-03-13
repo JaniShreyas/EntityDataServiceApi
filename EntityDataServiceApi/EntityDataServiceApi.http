@@ -1,0 +1,6 @@
+@EntityDataServiceApi_HostAddress = http://localhost:5038
+
+GET {{EntityDataServiceApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
