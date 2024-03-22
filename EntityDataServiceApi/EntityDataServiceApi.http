@@ -1,6 +1,40 @@
-@EntityDataServiceApi_HostAddress = http://localhost:5038
+@EntityDataServiceApi_HostAddress = https://localhost:7203
 
 GET {{EntityDataServiceApi_HostAddress}}/weatherforecast/
 Accept: application/json
+
+###
+
+POST {{EntityDataServiceApi_HostAddress}}/todoItems
+Content-Type: application/json
+
+{
+  "name":"walk dog",
+  "isComplete":true
+}
+
+###
+
+GET {{EntityDataServiceApi_HostAddress}}/todoItems
+
+###
+
+GET {{EntityDataServiceApi_HostAddress}}/todoItems/1
+
+###
+
+PUT {{EntityDataServiceApi_HostAddress}}/todoItems/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "feed fish",
+  "isComplete": false
+}
+
+
+###
+
+DELETE {{EntityDataServiceApi_HostAddress}}/todoItems/{id}
 
 ###
